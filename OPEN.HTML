@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POPUP Notification</title>
+  <script>
+    var popup;
+
+    function openPopup() {
+      // Check if the subject contains "WHTR" or "SALES ORDER"
+      var subject = "Subject of your email"; // Replace with the actual subject of your email
+      if (subject.includes("WHTR") || subject.includes("SALES ORDER")) {
+        // Open popup window
+        popup = window.open("", "popup", "width=500,height=400");
+        popup.document.write("<h1>WHTR / SALES ORDER MAIL NOTIFICATION!!!!!!</h1>");
+        popup.document.write("<p>You have received an email with the subject containing 'WHTR' or 'SALES ORDER'.</p>");
+        popup.document.write("<button onclick='window.close()'>Close</button>");
+      } else {
+        alert("No email with the specified subject found.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="openPopup()">Open Popup</button>
+</body>
+</html>
+
+
+
